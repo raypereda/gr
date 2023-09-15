@@ -19,7 +19,9 @@ TODO
 
 ## Example 1
 ```
-gr critic Man_in_the_Arena--Teddy_Roosevelt.txt
+$ gr critic Man_in_the_Arena--Teddy_Roosevelt.txt
+```
+```
 Man_in_the_Arena--Teddy_Roosevelt.txt
 record separator:  (\n\n)|(\r\n\r\n)
 37  paragraphs
@@ -76,7 +78,9 @@ over whose memory we love to linger, not over the memory of the young lord who
 ## Example 2
 ```
 $ gr garden Candide_by_Voltaire.txt 
+```
 
+```
 Candide_by_Voltaire.txt
 record separator:  (\n\n)|(\r\n\r\n)
 967  paragraphs
