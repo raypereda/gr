@@ -6,16 +6,40 @@
 Usage of gr:
     gr [-r <string>] <pattern> [<file>]
     gr [-h]
-If no files names, reads from standard input.
+If no files names, it reads from standard input.
 Print records that match golang regex pattern.
   -r string
         Record separator (default "(\\n\\n)|(\\r\\n\\r\\n)")
 ```
 
-## Benchmark
+The Golang regular expression syntax specification is [here](https://golang.org/pkg/regexp/syntax/)
+.
 
-TODO
+## Runtime
 
+The runtime is measured on a Mac 2021 Macbook with Apple M1 chip.
+
+```
+time gr law The_King_James_Version_of_the_Bible.txt > /dev/null  
+0.17s user 0.01s system 100% cpu 0.180 total
+```
+
+For comparison with mac /usr/bin/grep, here is the timing.:
+```
+time grep law  The_King_James_Version_of_the_Bible.txt > /dev/null
+0.05s user 0.00s system 96% cpu 0.061 total
+```
+
+
+## Installation 
+
+These are 64-bit statically linked executables:
+1. gr-linux-intel
+2. gr-mac-apple-silicon
+3. gr-mac-intel
+4. gr.exe-windows
+
+To install, copy to a directory that on your shell $PATH environment variable.
 
 ## Example 1
 ```
